@@ -9,7 +9,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 12fr 8fr;
+    grid-template-rows: 1fr 9fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
     "header"
@@ -56,7 +56,7 @@ header {
 
 main {
     grid-area: main;
-    grid-row: 1 / 12;
+    grid-row: 1 / 9;
 }
 
 #hero {
@@ -132,4 +132,40 @@ main {
     font-weight: bolder;
     font-size: 14px;
     width: 200px;
+}
+
+#info {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "info-content info-content info-content";
+    padding: 100px 120px;
+    gap: 30px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    text-align: center;
+}
+
+.info-content a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #000;
+}
+
+.info-content p, .info-content span {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.info-content span {
+    color: #eb1700;
+    font-weight: bold;
 }
